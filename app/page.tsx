@@ -7,6 +7,24 @@ import BackToTop from "@/components/BackToTop";
 import HeroBackground from "@/components/HeroBackground";
 import { motion } from "motion/react";
 
+const YinYangIcon = ({ className, strokeWidth = 2 }: { className?: string, strokeWidth?: number }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth={strokeWidth} 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 2a5 5 0 0 0 0 10 5 5 0 0 1 0 10" />
+    <circle cx="12" cy="7" r="1" fill="currentColor" />
+    <circle cx="12" cy="17" r="1" fill="currentColor" />
+  </svg>
+);
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black font-sans">
@@ -262,8 +280,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-10 h-10 rounded-full overflow-hidden relative border border-gray-700">
-                  <Image src="https://picsum.photos/seed/yinyang/100/100" alt="Logo" fill className="object-cover" />
+                <div className="w-10 h-10 rounded-full flex items-center justify-center bg-white text-[#0a1510]">
+                  <YinYangIcon className="w-6 h-6" strokeWidth={2} />
                 </div>
                 <span className="font-oswald text-xl font-bold tracking-wide">GLOBAL ECO-TECH</span>
               </div>

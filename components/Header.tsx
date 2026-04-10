@@ -5,6 +5,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 
+const YinYangIcon = ({ className, strokeWidth = 2 }: { className?: string, strokeWidth?: number }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth={strokeWidth} 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 2a5 5 0 0 0 0 10 5 5 0 0 1 0 10" />
+    <circle cx="12" cy="7" r="1" fill="currentColor" />
+    <circle cx="12" cy="17" r="1" fill="currentColor" />
+  </svg>
+);
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,8 +33,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white py-4 px-8 flex items-center justify-between shadow-sm">
       <div className="flex items-center gap-2">
         {/* Logo */}
-        <div className="w-12 h-12 rounded-full overflow-hidden relative border border-gray-200">
-          <Image src="https://picsum.photos/seed/yinyang/100/100" alt="Logo" fill className="object-cover" />
+        <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#0a1510] text-white">
+          <YinYangIcon className="w-8 h-8" strokeWidth={1.5} />
         </div>
       </div>
 
