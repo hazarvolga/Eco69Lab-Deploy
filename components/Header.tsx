@@ -29,6 +29,22 @@ export default function Header() {
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMenu = () => setIsMobileMenuOpen(false);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      const headerOffset = 80; // Approximate header height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    closeMenu();
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white py-4 px-8 flex items-center justify-between shadow-sm">
       <div className="flex items-center gap-2">
@@ -40,12 +56,12 @@ export default function Header() {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-800">
-        <Link href="#map" className="hover:text-[#6b7558] transition-colors">Map</Link>
-        <Link href="#lab-tools" className="hover:text-[#6b7558] transition-colors">Lab Tools</Link>
-        <Link href="#eco-projects" className="hover:text-[#6b7558] transition-colors">Eco Projects</Link>
-        <Link href="#hub" className="hover:text-[#6b7558] transition-colors">Hub</Link>
-        <Link href="#alliance-vrm" className="hover:text-[#6b7558] transition-colors">Alliance/VRM</Link>
-        <Link href="#contact" className="hover:text-[#6b7558] transition-colors">Contact</Link>
+        <a href="#map" onClick={(e) => handleScroll(e, '#map')} className="hover:text-[#6b7558] transition-colors">Map</a>
+        <a href="#lab-tools" onClick={(e) => handleScroll(e, '#lab-tools')} className="hover:text-[#6b7558] transition-colors">Lab Tools</a>
+        <a href="#eco-projects" onClick={(e) => handleScroll(e, '#eco-projects')} className="hover:text-[#6b7558] transition-colors">Eco Projects</a>
+        <a href="#hub" onClick={(e) => handleScroll(e, '#hub')} className="hover:text-[#6b7558] transition-colors">Hub</a>
+        <a href="#alliance-vrm" onClick={(e) => handleScroll(e, '#alliance-vrm')} className="hover:text-[#6b7558] transition-colors">Alliance/VRM</a>
+        <a href="#contact" onClick={(e) => handleScroll(e, '#contact')} className="hover:text-[#6b7558] transition-colors">Contact</a>
       </nav>
 
       {/* Mobile Menu Toggle Button */}
@@ -73,12 +89,12 @@ export default function Header() {
             transition={{ duration: 0.2 }}
             className="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 md:hidden flex flex-col py-4 px-8 gap-4"
           >
-            <Link href="#map" onClick={closeMenu} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Map</Link>
-            <Link href="#lab-tools" onClick={closeMenu} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Lab Tools</Link>
-            <Link href="#eco-projects" onClick={closeMenu} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Eco Projects</Link>
-            <Link href="#hub" onClick={closeMenu} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Hub</Link>
-            <Link href="#alliance-vrm" onClick={closeMenu} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Alliance/VRM</Link>
-            <Link href="#contact" onClick={closeMenu} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2">Contact</Link>
+            <a href="#map" onClick={(e) => handleScroll(e, '#map')} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Map</a>
+            <a href="#lab-tools" onClick={(e) => handleScroll(e, '#lab-tools')} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Lab Tools</a>
+            <a href="#eco-projects" onClick={(e) => handleScroll(e, '#eco-projects')} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Eco Projects</a>
+            <a href="#hub" onClick={(e) => handleScroll(e, '#hub')} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Hub</a>
+            <a href="#alliance-vrm" onClick={(e) => handleScroll(e, '#alliance-vrm')} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2 border-b border-gray-50">Alliance/VRM</a>
+            <a href="#contact" onClick={(e) => handleScroll(e, '#contact')} className="text-gray-800 hover:text-[#6b7558] font-medium transition-colors py-2">Contact</a>
           </motion.div>
         )}
       </AnimatePresence>
