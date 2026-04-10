@@ -28,11 +28,21 @@ const YinYangIcon = ({ className, strokeWidth = 2 }: { className?: string, strok
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black font-sans">
+      <svg style={{ width: 0, height: 0, position: 'absolute' }} aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="wave-clip-1" clipPathUnits="objectBoundingBox">
+            <path d="M 0,0 L 1,0 L 1,1 C 0.5,1 0.5,0.92 0,0.92 Z" />
+          </clipPath>
+          <clipPath id="wave-clip-2" clipPathUnits="objectBoundingBox">
+            <path d="M 0,0 L 1,0 L 1,0.92 C 0.5,0.92 0.5,1 0,1 Z" />
+          </clipPath>
+        </defs>
+      </svg>
       <Header />
       <BackToTop />
 
       {/* Hero Section */}
-      <section id="map" className="relative h-[800px] flex items-center overflow-hidden bg-[#0a1510]">
+      <section id="map" className="relative h-[800px] flex items-center overflow-hidden bg-[#0a1510] z-40" style={{ clipPath: 'url(#wave-clip-1)' }}>
         <div className="absolute inset-0 z-0">
           <HeroBackground />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
@@ -53,17 +63,10 @@ export default function Home() {
             </button>
           </motion.div>
         </div>
-
-        {/* Wave Divider 1 (High to Low) */}
-        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-20">
-          <svg viewBox="0 0 1440 100" className="w-full h-[60px] md:h-[100px] block" preserveAspectRatio="none">
-            <path d="M0,0 C720,0 720,100 1440,100 L1440,120 L0,120 Z" fill="#1a1c18" />
-          </svg>
-        </div>
       </section>
 
       {/* Lab Tools Section */}
-      <section id="lab-tools" className="relative h-[700px] flex items-center bg-[#1a1c18] overflow-hidden">
+      <section id="lab-tools" className="relative h-[700px] flex items-center bg-[#1a1c18] overflow-hidden z-30 -mt-24 pt-16" style={{ clipPath: 'url(#wave-clip-2)' }}>
         <div className="absolute inset-0 z-0">
           <Image 
             src="https://picsum.photos/seed/labtools/1920/1080" 
@@ -93,17 +96,10 @@ export default function Home() {
             </button>
           </motion.div>
         </div>
-
-        {/* Wave Divider 2 (Low to High) */}
-        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-20">
-          <svg viewBox="0 0 1440 100" className="w-full h-[60px] md:h-[100px] block" preserveAspectRatio="none">
-            <path d="M0,100 C720,100 720,0 1440,0 L1440,120 L0,120 Z" fill="#2a221b" />
-          </svg>
-        </div>
       </section>
 
       {/* Eco Projects Section */}
-      <section id="eco-projects" className="relative h-[700px] flex items-center bg-[#2a221b] overflow-hidden">
+      <section id="eco-projects" className="relative h-[700px] flex items-center bg-[#2a221b] overflow-hidden z-20 -mt-24 pt-16" style={{ clipPath: 'url(#wave-clip-1)' }}>
         <div className="absolute inset-0 z-0">
           <Image 
             src="https://picsum.photos/seed/ecoprojects/1920/1080" 
@@ -133,17 +129,10 @@ export default function Home() {
             </button>
           </motion.div>
         </div>
-
-        {/* Wave Divider 3 (High to Low) */}
-        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-20">
-          <svg viewBox="0 0 1440 100" className="w-full h-[60px] md:h-[100px] block" preserveAspectRatio="none">
-            <path d="M0,0 C720,0 720,100 1440,100 L1440,120 L0,120 Z" fill="#3a2e25" />
-          </svg>
-        </div>
       </section>
 
       {/* ECO69HUB Section */}
-      <section id="hub" className="relative h-[700px] flex items-center bg-[#3a2e25] overflow-hidden">
+      <section id="hub" className="relative h-[700px] flex items-center bg-[#3a2e25] overflow-hidden z-10 -mt-24 pt-16" style={{ clipPath: 'url(#wave-clip-2)' }}>
         <motion.div 
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -180,17 +169,10 @@ export default function Home() {
             </button>
           </motion.div>
         </div>
-
-        {/* Wave Divider 4 (Low to High) */}
-        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-20">
-          <svg viewBox="0 0 1440 100" className="w-full h-[60px] md:h-[100px] block" preserveAspectRatio="none">
-            <path d="M0,100 C720,100 720,0 1440,0 L1440,120 L0,120 Z" fill="#ffffff" />
-          </svg>
-        </div>
       </section>
 
       {/* The Alliance & VRM Platform Section */}
-      <section id="alliance-vrm" className="relative py-24 bg-white text-black">
+      <section id="alliance-vrm" className="relative pb-24 pt-40 bg-white text-black z-0 -mt-24">
         <div className="container px-8 md:px-16 mx-auto max-w-6xl">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
