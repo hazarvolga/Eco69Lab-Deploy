@@ -13,14 +13,15 @@ export function generateStaticParams() {
 }
 
 type Props = {
-    params: { id: string };
+    params: Promise<{ id: string }>;
 };
 
 export async function generateMetadata(
     { params }: Props,
     parent: ResolvingMetadata
 ): Promise<Metadata> {
-    const product = productsData.find((p) => p.id === params.id);
+    const resolvedParams = await params;
+    const product = productsData.find((p) => p.id === resolvedParams.id);
 
     if (!product) {
         return {
@@ -41,8 +42,9 @@ export async function generateMetadata(
     };
 }
 
-export default function ProductDetail({ params }: Props) {
-    const product = productsData.find((p) => p.id === params.id);
+export default async function ProductDetail({ params }: Props) {
+    const resolvedParams = await params;
+    const product = productsData.find((p) => p.id === resolvedParams.id);
 
     if (!product) return notFound();
 

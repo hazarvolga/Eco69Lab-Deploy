@@ -13,7 +13,7 @@ export default function TermsOfService() {
 
                     <section>
                         <h2 className="text-2xl text-foreground mb-4">1. Agreement to Terms</h2>
-                        <p>By accessing or using Eco69Lab's services and website, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access our network or use our products.</p>
+                        <p>By accessing or using Eco69Lab&apos;s services and website, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access our network or use our products.</p>
                     </section>
 
                     <section>

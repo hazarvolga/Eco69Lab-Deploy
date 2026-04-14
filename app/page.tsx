@@ -304,7 +304,7 @@ export default function Home() {
               Keeping Customers Satisfied
             </h2>
             <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed mb-6">
-              At Eco69Lab, customer satisfaction is our top priority. We focus on delivering exceptional products and services, responding promptly to inquiries, and providing ongoing support to ensure that our customers' needs are always met.
+              At Eco69Lab, customer satisfaction is our top priority. We focus on delivering exceptional products and services, responding promptly to inquiries, and providing ongoing support to ensure that our customers&apos; needs are always met.
             </p>
           </div>
 
@@ -314,7 +314,7 @@ export default function Home() {
                 <div className="text-accent mb-6 flex gap-1">
                   {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>)}
                 </div>
-                <p className="text-muted font-light italic mb-8 leading-relaxed">"Eco69Lab has been an invaluable partner in our laboratory operations. Their expertise in medical tools and equipment has greatly enhanced our capabilities!"</p>
+                <p className="text-muted font-light italic mb-8 leading-relaxed">&quot;Eco69Lab has been an invaluable partner in our laboratory operations. Their expertise in medical tools and equipment has greatly enhanced our capabilities!&quot;</p>
               </div>
               <div className="pt-6 border-t border-border flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center font-lora text-accent">P</div>
@@ -329,7 +329,7 @@ export default function Home() {
                 <div className="text-accent mb-6 flex gap-1">
                   {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>)}
                 </div>
-                <p className="text-muted font-light italic mb-8 leading-relaxed">"Working with Eco69Lab has transformed our laboratory's efficiency. Their knowledge of medical tools and commitment to quality have made a significant difference. We highly recommend their services!"</p>
+                <p className="text-muted font-light italic mb-8 leading-relaxed">&quot;Working with Eco69Lab has transformed our laboratory&apos;s efficiency. Their knowledge of medical tools and commitment to quality have made a significant difference. We highly recommend their services!&quot;</p>
               </div>
               <div className="pt-6 border-t border-border flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center font-lora text-accent">C</div>
@@ -344,7 +344,7 @@ export default function Home() {
                 <div className="text-background mb-6 flex gap-1">
                   {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>)}
                 </div>
-                <p className="text-background/80 font-medium italic mb-8 leading-relaxed">"Eco69Lab team has been great partner through our operations internationally. Their innovative and sustainable philosophy enabled our organization to leverage the latest technologies and best practices."</p>
+                <p className="text-background/80 font-medium italic mb-8 leading-relaxed">&quot;Eco69Lab team has been great partner through our operations internationally. Their innovative and sustainable philosophy enabled our organization to leverage the latest technologies and best practices.&quot;</p>
               </div>
               <div className="pt-6 border-t border-background/20 flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-background flex items-center justify-center font-lora text-accent">D</div>
