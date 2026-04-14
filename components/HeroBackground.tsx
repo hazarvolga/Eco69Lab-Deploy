@@ -8,7 +8,7 @@ export default function HeroBackground() {
       muted
       playsInline
       className="absolute inset-0 w-full h-full object-cover opacity-60"
-      src="/hero-bg-video-01.mp4"
+      src="/hero-gaia-bg.mp4"
     />
   );
 }

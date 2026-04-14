@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+:root {
+  /* LIGHT: Organic & Clinical */
+  --background: #F7F5F0;
+  --foreground: #08120D;
+  --surface: #FFFFFF;
+  --surface-hover: #F0EDE4;
+  --accent: #4A6B48; /* Moss green highlights */
+  --accent-hover: #3B5738;
+  --muted: #5A6B61;
+  --border: rgba(8, 18, 13, 0.1);
+}
+
+.dark {
+  /* DARK: Premium Bio-Tech (Our previous design) */
+  --background: #08120D;
+  --foreground: #F7F5F0;
+  --surface: #0E1A14;
+  --surface-hover: #14231b;
+  --accent: #D4B872; /* Sunlight gold highlights */
+  --accent-hover: #bfa360;
+  --muted: #a4a9a3;
+  --border: rgba(247, 245, 240, 0.05); /* White stroke at low opacity */
+}
