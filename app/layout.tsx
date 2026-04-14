@@ -7,7 +7,7 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 const lora = Lora({ subsets: ['latin'], variable: '--font-lora' });
 
 export const metadata: Metadata = {
-  title: 'Global Eco-Tech Network | Gaia Design',
+  title: 'Eco69Lab | Gaia Design',
   description: 'Validating Planetary Health with Sustainable Science',
 };
 
